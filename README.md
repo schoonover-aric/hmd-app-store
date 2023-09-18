@@ -10,6 +10,7 @@ cd to project directory
 
 ### Install dependencies (must have NPM and Composer installed)
 npm install
+
 composer install
 
 ## Database setup
