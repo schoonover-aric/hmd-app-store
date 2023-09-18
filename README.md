@@ -1,11 +1,29 @@
 ## About H.M.D. App Store (hmd-app-store)
 This is a project that utilizes the [app-store-scraper](https://github.com/facundoolano/app-store-scraper) Node.js module to fetch and display data from the iTunes App Store.
 
+## Installation
+# Clone the repository
+git clone https://github.com/schoonover-aric/hmd-app-store.git
+
+# Navigate to the project directory
+cd to project directory
+
+# Install dependencies (must have NPM and Composer installed)
+npm install
+composer install
+
 ## Database setup
-This aplication uses a SQLite database. You'll need a 'database.sqlite' file in your root/database directory, but Laravel will create it for you if it doesn't exist.
+This aplication uses a SQLite database. You'll need a 'database.sqlite' file in your root/database directory, but Laravel will create it for you if it doesn't exist. 
+
+## Configuration
+Your .env file should contain two database entries ('DB_CONNECTION=sqlite' and 'DB_DATABASE=database.sqlite')
 
 ## Build & Run Instructions
-To get the appilcation up and running, 
+To get the appilcation up and running,
+
+
+## Usage
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
