@@ -2,13 +2,13 @@
 This is a project that utilizes the [app-store-scraper](https://github.com/facundoolano/app-store-scraper) Node.js module to fetch and display data from the iTunes App Store.
 
 ## Installation
-# Clone the repository
+### Clone the repository
 git clone https://github.com/schoonover-aric/hmd-app-store.git
 
-# Navigate to the project directory
+### Navigate to the project directory
 cd to project directory
 
-# Install dependencies (must have NPM and Composer installed)
+### Install dependencies (must have NPM and Composer installed)
 npm install
 composer install
 
