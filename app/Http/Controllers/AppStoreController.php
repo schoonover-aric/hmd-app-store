@@ -91,6 +91,9 @@ class AppStoreController extends Controller
                         return ['error' => 'Error fetching app details'];
                     }
 
+                    // Manually decode JSON fields
+                    // $appDetails->languages = json_decode($appDetails->languages);
+
                     // Save the new appDetails to the database
                     foreach ($appDetails as $app) {
                         try {

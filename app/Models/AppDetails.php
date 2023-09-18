@@ -20,8 +20,6 @@ class AppDetails extends Model
         'supportedDevices' => 'json',
     ];
 
-    // protected $guarded = [];
-
     protected $fillable = [
         'theId',
         'appId',
@@ -60,9 +58,3 @@ class AppDetails extends Model
         'updated_at',
     ];
 }
-
-// public $incrementing = true;
-
-// protected $primaryKey = 'p_key';
-
-// public $timestamps = true;

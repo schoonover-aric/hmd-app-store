@@ -19,10 +19,6 @@
                     &darr;
                 </span></a>
         </h1>
-        <?php // dd($ratingsAndReviews['ratings']);
-        // dd($ratingsAndReviews);
-        // dd($reviewsForSentiment);
-        ?>
         {{-- Check if appDetails exists --}}
         @if (isset($appDetails))
             {{-- Create a table to display app details --}}
@@ -39,9 +35,6 @@
                                     @if (is_array($value))
                                         {{-- Handle arrays --}}
                                         {{ implode(', ', $value) }}
-                                    @elseif (is_object($value))
-                                        {{-- Handle objects --}}
-                                        {{ json_encode($value) }}
                                     @else
                                         {{-- Handle strings --}}
                                         {{ $value }}
@@ -80,7 +73,6 @@
                                             // Reverse the array before looping (to display 5 star rating at top of list)
                                             $histogram = array_reverse($ratingsAndReviews['ratings']['histogram']);
                                         @endphp
-                                        {{-- @foreach ($ratingsAndReviews['ratings']['histogram'] as $rating => $count) --}}
                                         @foreach ($histogram as $rating => $count)
                                             <tr>
                                                 <td
@@ -108,12 +100,6 @@
                             <p class="text-center mb-2.5">Neutral sentiment = 0 | Positive sentiment > 0 | Negative
                                 sentiment < 0</p>
                                     <div class="border-t border-r border-b border-l border-sky-500 p-2">
-                                        {{-- @if (isset($output))
-                                    <pre>{{ $output }}</pre>
-                                    <p></p>
-                                @else
-                                    <p id="sentimentResponse">Sentiment not yet available.</p>
-                                @endif --}}
                                         <p class="whitespace-wrap p-2" id="sentimentResponse">Sentiment not available.
                                             Please click 'Get Feedback'
                                         </p>
@@ -127,7 +113,7 @@
                             <a href="#page-top">
                                 <button type="button"
                                     class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
-                                    Back to top
+                                    Back to Top
                                 </button>
                             </a>
                         </div>
@@ -139,7 +125,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div>
                     @if (!empty($ratingsAndReviews['reviews']))
                         <h2 class="text-3xl font-semibold mt-8 mb-4">Reviews</h2>
@@ -191,14 +176,12 @@
             @else
                 <p>No ratings and reviews data available</p>
                 @endif
-                <!-- Other content of the app-details page -->
             </div>
         </div>
     </div>
     <script>
-        // Convert the PHP variable $reviewsForSentiment to a JavaScript variable
+        // Convert PHP variable $reviewsForSentiment to JavaScript variable
         const reviewsForSentiment = @json($reviewsForSentiment);
-        // console.log(reviewsForSentiment);
     </script>
 </body>
 

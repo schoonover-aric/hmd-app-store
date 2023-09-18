@@ -31,14 +31,12 @@
             </div>
         </div>
         <?php
-        // echo 'Yoooooo! Got your data here: ';
-        // dd($appsUpdated);
         ?>
         {{-- App Search Form --}}
         <form method="post" action="{{ route('home') }}" class="mb-8 mt-4">
             @csrf
             <div class="flex flex-col sm:flex-row sm:space-x-4">
-                <!-- Your form input fields for minimum release and updated dates -->
+                <!-- form input fields for minimum release and updated dates -->
                 <div class="mt-4 sm:mt-0 flex items-center text-xl">
                     <label for="minReleaseDate">Minimum Release Date: </label>
                     <input class="text-black mx-2" type="date" name="minReleaseDate" id="minReleaseDate"
@@ -93,21 +91,6 @@
                                 </tr>
                             @endforeach
                         </tbody>
-                        {{-- <tbody>
-                            @foreach ($appsReleased as $app)
-                                <tr>
-                                    <td class="border-t border-r border-b border-l border-sky-500 p-2">
-                                        <a class="hover:text-blue-500"
-                                            href="{{ route('app-details', ['id' => $app['theId']]) }}">{{ $app['title'] }}</a>
-                                        <a class="text-blue-600 hover:text-blue-500"
-                                            href="{{ route('app-details', ['id' => $app['theId']]) }}">View Details</a>
-                                    </td>
-                                    <td class="border-t border-r border-b border-l border-sky-500 p-2 text-center">
-                                        {{ date('F j, Y', strtotime($app['released'])) }}
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody> --}}
                     </table>
                 @else
                     <p>No apps released meet the criteria. Please choose a date!</p>
@@ -150,22 +133,6 @@
                                 </tr>
                             @endforeach
                         </tbody>
-                        {{-- <tbody>
-                            @foreach ($appsUpdated as $app)
-                                <tr>
-                                    <td class="border-t border-r border-b border-l border-sky-500 p-2">
-                                        <a class="hover:text-blue-500"
-                                            href="{{ route('app-details', ['id' => $app['theId']]) }}">{{ $app['title'] }}</a>
-                                        <a class="text-blue-600 hover:text-blue-500"
-                                            href="{{ route('app-details', ['id' => $app['theId']]) }}">View Details</a>
-                                    </td>
-                                    <td class="border-t border-r border-b border-l border-sky-500 p-2 text-center">
-                                        {{-- {{ $app['updated'] }} --}}
-                        {{-- {{ date('F j, Y', strtotime($app['updated'])) }} 
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody> --}}
                     </table>
                 @else
                     <p>No apps updated meet the criteria. Please choose a date!</p>

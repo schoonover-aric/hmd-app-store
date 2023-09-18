@@ -1,0 +1,17 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-193ebfed.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-dbe23e4c.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/sentiment-analysis.js": {
+    "file": "assets/sentiment-analysis-c9d2474a.js",
+    "isEntry": true,
+    "src": "resources/js/sentiment-analysis.js"
+  }
+}

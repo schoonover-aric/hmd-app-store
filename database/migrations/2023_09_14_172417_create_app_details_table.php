@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('primaryGenre')->nullable();
             $table->integer('primaryGenreId')->nullable();
             $table->string('contentRating')->nullable();
-            $table->json('languages')->nullable();
+            $table->string('languages')->nullable();
             $table->string('size')->nullable();
             $table->string('requiredOsVersion')->nullable();
             $table->dateTime('released')->nullable();
