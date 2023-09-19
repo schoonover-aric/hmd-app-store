@@ -23,7 +23,8 @@
                     <li>Enter a minimum release date to filter apps released on or after that date.</li>
                     <li>Enter a minimum updated date to filter apps updated on or after that date.</li>
                     <li>Click the "Search" button to view the results.</li>
-                    <li>Click an app Title for more details and a "Request Feedback" option from ChatGPT!</li>
+                    <li>Click an app Title for more details and a "Request Feedback" option for a Sentiment Analysis!
+                    </li>
                 </ul>
                 <p class="mt-4 mb-4">
                     Let's get started!
