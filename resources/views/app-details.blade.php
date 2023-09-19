@@ -26,20 +26,41 @@
                 <tbody>
                     {{-- Loop through the selected app's details --}}
                     @foreach ($appDetails->getAttributes() as $key => $value)
-                        {{-- Skip first item (primary key) --}}
-                        @if (!$loop->first)
+                        {{-- Skip first item (primary key) and timestamps --}}
+                        @if (!$loop->first && $key !== 'created_at' && $key !== 'updated_at')
                             <tr>
                                 <td class="border-t border-r border-b border-l border-sky-500 p-2">{{ $key }}
                                 </td>
                                 <td class="border-t border-r border-b border-l border-sky-500 p-2">
-                                    @if (is_array($value))
-                                        {{-- Handle arrays --}}
-                                        {{ implode(', ', $value) }}
+                                    @if (
+                                        $key === 'languages' ||
+                                            $key === 'genres' ||
+                                            $key === 'genreIds' ||
+                                            $key === 'screenshots' ||
+                                            $key === 'ipadScreenshots' ||
+                                            $key === 'appletvScreenshots' ||
+                                            $key === 'supportedDevices')
+                                        {{-- Handle the "languages" key --}}
+                                        {{ implode(', ', json_decode($value)) }}
+                                    @elseif ($key === 'released' || $key === 'updated')
+                                        {{-- Handle Dates --}}
+                                        {{ date('F j, Y', strtotime($value)) }}
+                                    @elseif ($key === 'size' || $key === 'reviews' || $key === 'currentVersionReviews')
+                                        {{ number_format($value) }}
                                     @else
                                         {{-- Handle strings --}}
                                         {{ $value }}
                                     @endif
                                 </td>
+                                {{-- <td class="border-t border-r border-b border-l border-sky-500 p-2"> --}}
+                                {{-- @if (is_array($value)) --}}
+                                {{-- Handle arrays --}}
+                                {{-- {{ implode(', ', $value) }} --}}
+                                {{-- @else --}}
+                                {{-- Handle strings --}}
+                                {{-- {{ $value }} --}}
+                                {{-- @endif --}}
+                                {{-- </td> --}}
                             </tr>
                         @endif
                     @endforeach

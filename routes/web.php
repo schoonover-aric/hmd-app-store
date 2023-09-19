@@ -15,11 +15,11 @@ use App\Http\Controllers\AppStoreController;
 */
 
 // Home Page
-Route::get('/', [AppStoreController::class, 'index'])->name('home');
-Route::post('/', [AppStoreController::class, 'index'])->name('home');
+Route::get('/', [AppStoreController::class, 'index']);
+Route::post('/', [AppStoreController::class, 'index']);
 Route::get('/home', [AppStoreController::class, 'index'])->name('home');
-Route::post('/home', [AppStoreController::class, 'index'])->name('home');
+Route::post('/home', [AppStoreController::class, 'index']);
 
 // App Details Page        // not sure if I can pass more than 1 item...
 Route::get('/app-details/{id}', [AppStoreController::class, 'appDetailsById'])->name('app-details');
-Route::post('/app-details/{id}', [AppStoreController::class, 'appDetailsById'])->name('app-details');
+Route::post('/app-details/{id}', [AppStoreController::class, 'appDetailsById']);

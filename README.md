@@ -2,6 +2,9 @@
 This is a project that utilizes the [app-store-scraper](https://github.com/facundoolano/app-store-scraper) Node.js module to fetch and display data from the iTunes App Store.
 
 ## Installation
+Prerequisites: 
+- PHP | Composer | Node
+
 ### Clone the repository
 git clone https://github.com/schoonover-aric/hmd-app-store.git
 
@@ -14,16 +17,17 @@ npm install
 composer install
 
 ## Database setup
-This aplication uses a SQLite database. You'll need a 'database.sqlite' file in your root/database directory, but Laravel will create it for you if it doesn't exist. 
+This aplication uses a SQLite database. You'll need a 'database.sqlite' file in your root/database directory, but Laravel will create it for you if it doesn't exist. Run 'php artisan migrate' for database migrations.
 
 ## Configuration
 Your .env file should contain two database entries ('DB_CONNECTION=sqlite' and 'DB_DATABASE=database.sqlite')
 
 ## Build & Run Instructions
-To get the appilcation up and running,
+I've created a build script (composer build) that runs composer install, npm install, npm run dev, and php artisan migrate.
 
+I also added a start script (composer start) that you can use to run 'php artisan serve'.
 
-## Usage
+__________________________________________________________________________________________________________________________
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
