@@ -8,7 +8,7 @@
 </head>
 
 <body class="bg-slate-900 text-white">
-    <div class="container mx-auto px-16 mb-8">
+    <div class="container mx-auto mb-8">
         <h1 class="text-3xl text-blue-600 font-semibold mt-8 mb-4">H.M.D. - App Store Search</h1>
         <div class="container mx-auto flex flex-col">
             <div class="upper">

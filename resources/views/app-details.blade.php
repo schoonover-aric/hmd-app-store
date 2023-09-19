@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-slate-900 text-white">
-    <div class="container mx-auto mb-8 px-16">
+    <div class="container mx-auto mb-8">
         <h1 class="text-3xl font-semibold mt-8 mb-4" id="page-top">App Details | <a href="#ratings-reviews"
                 class="hover:text-blue-600 transition-colors duration-300">Ratings, Reviews & Feedback <span
                     class="text-blue-500 hover:text-blue-600">
