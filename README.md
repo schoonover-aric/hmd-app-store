@@ -20,7 +20,7 @@ composer install
 This aplication uses a SQLite database. You'll need a 'database.sqlite' file in your root/database directory, but Laravel will create it for you if it doesn't exist. Run 'php artisan migrate' for database migrations.
 
 ## Configuration
-Your .env file should contain two database entries ('DB_CONNECTION=sqlite' and 'DB_DATABASE=database.sqlite')
+Your .env file should contain two database settings ('DB_CONNECTION=sqlite' and 'DB_DATABASE=database.sqlite'), as well as your Laravel 'APP_KEY='
 
 ## Build & Run Instructions
 I've created a build script (composer build) that runs composer install, npm install, npm run dev, and php artisan migrate.
