@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>H.M.D. Search Apps</title>
+    <!-- Stylesheet -->
+    <link rel="preload" as="style" href="http://localhost/build/assets/app-772f233a.css" /><link rel="stylesheet" href="http://localhost/build/assets/app-772f233a.css" /></head>
+
+<body class="bg-slate-900 text-white">
+    <div class="container mx-auto px-16 mb-8">
+        <h1 class="text-3xl text-blue-600 font-semibold mt-8 mb-4">H.M.D. - App Store Search</h1>
+        <div class="container mx-auto flex flex-col">
+            <div class="upper">
+                <p class="mb-4">
+                    Welcome! This web application allows you to explore and analyze apps from
+                    the Apple/iTunes app store.
+                </p>
+                <p class="mb-4">
+                    Instructions:
+                </p>
+                <ul class="list-disc ml-6">
+                    <li>Enter a minimum release date to filter apps released on or after that date.</li>
+                    <li>Enter a minimum updated date to filter apps updated on or after that date.</li>
+                    <li>Click the "Search" button to view the results.</li>
+                    <li>Click an app Title for more details and a "Request Feedback" option from ChatGPT!</li>
+                </ul>
+                <p class="mt-4 mb-4">
+                    Let's get started!
+                </p>
+            </div>
+        </div>
+                
+        <form method="post" action="http://localhost/home" class="mb-8 mt-4">
+            <input type="hidden" name="_token" value="tq5vJwvz7KLVs474gdAzRgZykMghWszj0zMFUTtm">            <div class="flex flex-col sm:flex-row sm:space-x-4">
+                <!-- form input fields for minimum release and updated dates -->
+                <div class="mt-4 sm:mt-0 flex items-center text-xl">
+                    <label for="minReleaseDate">Minimum Release Date: </label>
+                    <input class="text-black mx-2" type="date" name="minReleaseDate" id="minReleaseDate"
+                        value="">
+                </div>
+                <div class="mt-4 sm:mt-0 flex items-center text-xl">
+                    <label for="minUpdatedDate">Minimum Updated Date: </label>
+                    <input class="text-black mx-2" type="date" name="minUpdatedDate" id="minUpdatedDate"
+                        value="">
+                </div>
+                <div class="mt-4 sm:mt-0">
+                    <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">Search</button>
+                </div>
+            </div>
+        </form>
+        <div class="flex flex-row space-x-12">
+            
+            <div class="flex-1">
+                                    <p>No apps released meet the criteria. Please choose a date!</p>
+                            </div>
+            <div class="flex-1">
+                
+                                    <p>No apps updated meet the criteria. Please choose a date!</p>
+                            </div>
+        </div>
+    </div>
+</body>
+
+</html>

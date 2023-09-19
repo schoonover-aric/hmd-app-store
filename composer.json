@@ -14,6 +14,7 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
+        "spatie/laravel-export": "^0.3.11",
         "tonysm/tailwindcss-laravel": "^0.10.1"
     },
     "require-dev": {
@@ -51,8 +52,12 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "build": "composer install && npm install && npm run dev && php artisan migrate",
-        "start": "php artisan serve"
+        "build": [
+            "composer install && npm install && npm run dev && php artisan migrate"
+        ],
+        "start": [
+            "php artisan serve"
+        ]
     },
     "extra": {
         "laravel": {
